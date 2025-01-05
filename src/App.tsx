@@ -13,14 +13,14 @@ function App() {
     {rowNumber : 3, rowDescription: 'Feed dog 3', rowAssigned: 'Eric3'}
   ]);
 
-  const deleteTodo = (deleteRowNumber) => {
+  const deleteTodo = (deleteRowNumber: number) => {
     let filtered = todos.filter(function (value) {
       return value.rowNumber !== deleteRowNumber;
     });
     setTodos(filtered);
   }
 
-  const addTodo = (description, assigned) => {
+  const addTodo = (description: string, assigned: string) => {
     let rowNumber = 0;
     if(todos.length > 0) {
       rowNumber = todos[todos.length - 1].rowNumber + 1;

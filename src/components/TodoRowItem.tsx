@@ -1,6 +1,9 @@
 import React from "react";
 
-function ToDoRowItem(props) {
+function ToDoRowItem(props: {rowNumber: number,
+     rowDescription: string, 
+     rowAssigned: string,
+     deleteTodo: Function}) {
 
     return (
         <tr onClick={() => props.deleteTodo(props.rowNumber)}>
