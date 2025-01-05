@@ -1,10 +1,11 @@
 import React from "react";
 
-function ToDoRowItem(props: {rowNumber: number,
-     rowDescription: string, 
-     rowAssigned: string,
-     deleteTodo: Function}) {
-
+export const ToDoRowItem: React.FC<{
+    rowNumber: number,
+    rowDescription: string, 
+    rowAssigned: string,
+    deleteTodo: Function
+}> = (props) => {
     return (
         <tr onClick={() => props.deleteTodo(props.rowNumber)}>
             <th scope='row'>{props.rowNumber}</th>
@@ -12,8 +13,5 @@ function ToDoRowItem(props: {rowNumber: number,
             <td>{props.rowAssigned}</td>
         </tr>
     );
-
 }
 
-
-export default ToDoRowItem;
